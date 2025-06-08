@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     return;
   }
 
-const prompt = `
+  const prompt = `
 あなたは1〜10の中の数字を知っているAIです。
 正解の数字は「${answer}」です。
 
@@ -22,8 +22,6 @@ const prompt = `
 あなたはAIですが、対話を大切にする存在です。
 質問：「${question}」
 `;
-
-  `;
 
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
