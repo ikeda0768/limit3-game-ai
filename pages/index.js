@@ -71,7 +71,7 @@ export default function Home() {
       if (reply.includes("はい")) {
         setGuessResult("🎉 正解です！");
       } else {
-        setGuessResult("❌ 不正解！正解は " answer " でした。");
+        setGuessResult('❌ 不正解！正解は  ${answer}  でした。');
       }
     } catch (error) {
       alert("エラーが発生しました");
