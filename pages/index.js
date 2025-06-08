@@ -59,25 +59,14 @@ export default function Home() {
       return;
     }
 
-    try {
-      const res = await fetch("/api/ask", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: `正解は ${guess} ですか？`, answer }),
-      });
+  // AIに判定を任せず、自前で判定
+  if (guess === answer) {
+    setGuessResult("🎉 正解です！");
+  } else {
+    setGuessResult(`❌ 不正解！正解は ${answer} でした。`);
+  }
+};
 
-      const data = await res.json();
-      const reply = data.reply || "（エラー: 返答なし）";
-      if (reply.includes("はい")) {
-        setGuessResult("🎉 正解です！");
-      } else {
-        setGuessResult(`❌ 不正解！正解は ${answer} でした。`);
-      }
-    } catch (error) {
-      alert("エラーが発生しました");
-      console.error(error);
-    }
-  };
 
   const handleRestart = () => {
     const newAnswer = Math.floor(Math.random() * 10) + 1;
