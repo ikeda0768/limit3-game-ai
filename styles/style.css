@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 20px 10px;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-image: url("/images/background-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: white;
+  background: rgba(255, 255, 255, 0.97); 
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.title-wrapper {
+  background-image: url("/images/title-image.png");
+  background-size: cover;         /* ✅ 横幅に合わせて埋め尽くす（切れてもOK） */
+  background-repeat: no-repeat;   /* ✅ 繰り返し禁止 */
+  background-position: center;    /* ✅ 中央寄せ */
+  width: 100%; /* ✅ 横幅は100% */
+  height: 80px; /* ✅ 表示したい高さを指定 */
+  overflow: hidden; /* ✅ はみ出した部分を非表示に */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 2px auto 2px;
+  line-height: 0;
+}
+
+/* セクション間に余白を */
+.container > section {
+  margin-bottom: 24px;
+}
+
+#questionLog {
+  list-style-type: none;  /* ← 黒ポチを非表示に */
+  padding-left: 0;        /* ← 左の余白も削除 */
+}
+
+
+
