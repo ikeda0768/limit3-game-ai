@@ -71,7 +71,7 @@ export default function Home() {
       if (reply.includes("はい")) {
         setGuessResult("🎉 正解です！");
       } else {
-        setGuessResult("❌ 不正解！");
+        setGuessResult("❌ 不正解！正解は " answer " でした。");
       }
     } catch (error) {
       alert("エラーが発生しました");
@@ -105,8 +105,8 @@ export default function Home() {
           <h2>質問フェーズ</h2>
           <p>1〜10のどれかの数字が選ばれている</p>
           <p>使える質問は3回だけ</p>
-          <p>自由に質問して</p>
-          <p>AIが「はい / いいえ」の回答を行うので</p>
+          <p>あなたが自由に質問して</p>
+          <p>AIが回答を行うので</p>
           <p>推理して正解を導き出そう</p>
           <input
             type="text"
